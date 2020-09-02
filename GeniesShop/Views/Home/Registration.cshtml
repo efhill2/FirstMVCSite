@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+<br />
+
+<form action="/Home/Summary">
+    First Name: <input type="text" name="firstname" required/>
+    <br />
+    Last Name:  <input type="text" name="lastname" required/>
+    <br />
+    Email: <input type="email" name="email" required />
+    <br />
+    Password: <input type="password" name="password" pattern="[A-Za-z0-9]{8,30}" title="Use Letters, Numbers only. Must be atleast eight characters" />
+    <br />
+
+
+    Why did you want to register?
+    <br />
+    <input type="checkbox" name=" opt1" /> Just Because.
+    <br />
+    <input type="checkbox" name="opt2" /> Interested.
+    <br />
+    <input type="checkbox" name="opt3" /> Word Of Mouth.
+    <br />
+    <input type="submit" value="Submit">
+</form>
+
+
