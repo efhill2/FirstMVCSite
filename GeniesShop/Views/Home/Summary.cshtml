@@ -1,9 +1,16 @@
-﻿
+﻿@model GeniesShop.Models.User
 @{
     ViewBag.Title = "Summary";
 }
 
-<h2>@ViewBag.WelcomeSummary</h2>
+<h2>Summary</h2>
 <br />
-<h3>@ViewBag.UserInfo</h3>
 
+
+Welcome, @Model.FirstName @Model.LastName!.
+<br />
+You're number is @Model.PhoneNumber, email is @Model.Email .
+<br />
+You're from @Model.City,@Model.State .
+<br />
+You decided to register because why lol @Model.Choice (^_^).
