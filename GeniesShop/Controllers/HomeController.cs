@@ -28,14 +28,14 @@ namespace GeniesShop.Controllers
 
             return View();
         }
-        [HttpGet]
+        
         public ActionResult Registration()
         {
 
             return View();
         }
-        [HttpPost]
-        public ActionResult Summary(string firstname, 
+        
+        public ActionResult Summary(User u/*string firstname, 
             string lastname,
             string email,
             string phonenumber,
@@ -43,36 +43,36 @@ namespace GeniesShop.Controllers
             string pwconfirm,
             string state,
             string city,
-            string choice)
+            string choice*/)
         {
-            User user = new User()
-            {
-                FirstName = firstname,
-                LastName = lastname,
-                Email = email,
-                PhoneNumber = phonenumber,
-                Password = password,
-                State = state,
-                City = city,
-                Choice = choice
-            };
+            //User user = new User()
+            //{
+            //    FirstName = firstname,
+            //    LastName = lastname,
+            //    Email = email,
+            //    PhoneNumber = phonenumber,
+            //    Password = password,
+            //    State = state,
+            //    City = city,
+            //    Choice = choice
+            //};
 
-            if (password != pwconfirm)
-            {
-                ViewBag.PasswordStatusMessage = "Passwords do not match!! <br / >";
-                return View("Registration");
-            }
-            else if ((!Regex.IsMatch(phonenumber, @"(\([0-9]{3}\)\-[0-9]{3}\-[0-9]{4})")) & ((!Regex.IsMatch(phonenumber, @"([0-9]{3}\.[0-9]{3}\.[0-9]{4})"))))
-            {
-                ViewBag.PhoneNumberStatusMessage = "Phone number needs to be in (XXX)-XXX-XXXX or (XXX).XXX.XXXX <br / >";
-                return View("Registration");
-            }
-            else
-            {
-                return View(user);
-            }
+            //if (password != pwconfirm)
+            //{
+            //    ViewBag.PasswordStatusMessage = "Passwords do not match!! <br / >";
+            //    return View("Registration");
+            //}
+            //else if ((!Regex.IsMatch(phonenumber, @"(\([0-9]{3}\)\-[0-9]{3}\-[0-9]{4})")) & ((!Regex.IsMatch(phonenumber, @"([0-9]{3}\.[0-9]{3}\.[0-9]{4})"))))
+            //{
+            //    ViewBag.PhoneNumberStatusMessage = "Phone number needs to be in (XXX)-XXX-XXXX or (XXX).XXX.XXXX <br / >";
+            //    return View("Registration");
+            //}
+            //else
+            //{
+            //    return View(u);
+            //}
 
-             
+            return View(u);
         }
 
     }
